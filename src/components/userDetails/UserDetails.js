@@ -20,9 +20,12 @@ const useStyles = makeStyles((theme) => ({
     color: "green",
     fontSize: "3em"
   },
+  name: {
+    padding: "10px",
+  },
   address: {
     paddingTop: "10px",
-    color: ""
+    fontSize: "18px"
   }
 }));
 
@@ -39,18 +42,17 @@ const User = (props) => {
             
             <Card className={classes.card}>
               <CardContent>
-                <h1>-name: {props.singleUsers.name}</h1>
-                <h2>-username: {props.singleUsers.username}</h2>
-                <h2>-email: {props.singleUsers.email}</h2>
-                <h2>-phone: {props.singleUsers.phone}</h2>
-                <h2>-company: {props.singleUsers.company.name}</h2>
-                <h2>-website: {props.singleUsers.website}</h2>
-                <h2 className={classes.address}>-address: <span></span>
+                <h2 className={classes.name}>Name: {props.singleUsers.name}</h2>
+                <h3>username: {props.singleUsers.username}</h3>
+                <h3>email: {props.singleUsers.email}</h3>
+                <h3>phone: {props.singleUsers.phone}</h3>
+                <h3>company: {props.singleUsers.company.name}</h3>
+                <h3>website: {props.singleUsers.website}</h3>
+                <h3 className={classes.address}>Address:</h3>
                   <p>-street: {props.singleUsers.address.street}</p>
                   <p>-suite: {props.singleUsers.address.suite}</p>
                   <p>-city: {props.singleUsers.address.city}</p>
                   <p>-zipcode: {props.singleUsers.address.zipcode}</p>
-                </h2>
               </CardContent>
             </Card>
           </Grid>
