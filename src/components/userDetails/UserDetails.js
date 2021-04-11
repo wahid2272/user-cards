@@ -46,13 +46,7 @@ const User = (props) => {
                 <h3>username: {props.singleUsers.username}</h3>
                 <h3>email: {props.singleUsers.email}</h3>
                 <h3>phone: {props.singleUsers.phone}</h3>
-                <h3>company: {props.singleUsers.company.name}</h3>
                 <h3>website: {props.singleUsers.website}</h3>
-                <h3 className={classes.address}>Address:</h3>
-                  <p>-street: {props.singleUsers.address.street}</p>
-                  <p>-suite: {props.singleUsers.address.suite}</p>
-                  <p>-city: {props.singleUsers.address.city}</p>
-                  <p>-zipcode: {props.singleUsers.address.zipcode}</p>
               </CardContent>
             </Card>
           </Grid>
