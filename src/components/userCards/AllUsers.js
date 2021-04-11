@@ -11,7 +11,7 @@ const userStyle = {
 const AllUsers = (props) => { 
   return (
     <div style={userStyle}>
-      {props.users.map(user => (<UserItem key={user.id} user={user}/> 
+      {props.users.map(user => (<UserItem key={user.id} user={user} apiParam={props.apiParam}/> 
           ))}
     </div> 
   );
