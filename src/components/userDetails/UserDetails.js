@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   card: {
-    width: "35vw",
+    maxWidth: "45vw",
     margin: "2em",
     padding: "1em",
     textAlign: "center"
@@ -20,13 +20,17 @@ const useStyles = makeStyles((theme) => ({
     color: "green",
     fontSize: "3em"
   },
+  address: {
+    paddingTop: "10px",
+    color: ""
+  }
 }));
 
 const User = (props) => {
   const [spacing] = React.useState(2);
   const classes = useStyles();
   return (
-    <div>
+    <>
       <h1 className={classes.heading}>User Details</h1>
 
       <Grid container className={classes.root} spacing={2}>
@@ -41,12 +45,18 @@ const User = (props) => {
                 <h2>-phone: {props.singleUsers.phone}</h2>
                 <h2>-company: {props.singleUsers.company.name}</h2>
                 <h2>-website: {props.singleUsers.website}</h2>
+                <h2 className={classes.address}>-address: <span></span>
+                  <p>-street: {props.singleUsers.address.street}</p>
+                  <p>-suite: {props.singleUsers.address.suite}</p>
+                  <p>-city: {props.singleUsers.address.city}</p>
+                  <p>-zipcode: {props.singleUsers.address.zipcode}</p>
+                </h2>
               </CardContent>
             </Card>
           </Grid>
         </Grid>
         </Grid>
-    </div>
+    </>
   );
 };
 

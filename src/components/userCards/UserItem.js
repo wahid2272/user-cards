@@ -12,7 +12,7 @@ const UserItem = ({ user: { name, username, website, id }, apiParam}) => {
       <div className="card text-center">
         <p className="img">{username.charAt(0)}</p>
         <h3 className="card-name">{name}</h3>
-        <h6>@{username}</h6>
+        <h6 className="card-username">@{username}</h6>
         <h6>{website}</h6>
       
         <div>
